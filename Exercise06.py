@@ -30,7 +30,18 @@ for i in range(len(testlist)):
     else:
         words[testlist[i]] += 1
 
+
+sorted_words = {}
 for word in words:
-    print word + " " + str(words[word])
+    frequency = words[word]
+    if sorted_words.get(frequency,False) == False:
+        sorted_words[frequency] = [word]
+    else:
+        sorted_words[frequency].append(word)
+        sorted_words[frequency].sort
+
+for word in sorted(sorted_words, reverse = False):
+    print word
+    print sorted_words[word]
 
 twain.close()
