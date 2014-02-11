@@ -15,7 +15,7 @@ words = {}
 
 testlist = filetext
 testlist = testlist.replace("--"," ")
-testlist = filetext.split()
+testlist = testlist.split()
 
 # for i in range(len(testlist)):
 #     if testlist[i] != testlist[i].split("--"):
@@ -41,7 +41,9 @@ for word in words:
         sorted_words[frequency].sort
 
 for word in sorted(sorted_words, reverse = False):
-    print word
-    print sorted_words[word]
+    print str(word) + " "+ ', '.join(sorted_words[word])
+    # print sorted_words[word]
+
+
 
 twain.close()
